@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Us</title>
+    <link rel="stylesheet" href="{% static 'css/About-us.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TastyBites</div>
+            <ul class="menu-items-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'orders' %}">Order</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+    </header> 
+<main>
+    <section id="about">
+        <div class="container">
+                <h1>About Us</h1>
+                <p>Welcome to TastyBites, where we bring you the best of Chinese, Indian, and Italian cuisines all under one roof. Our restaurant is a celebration of the rich culinary traditions from these three diverse cultures, offering you a delightful fusion of flavors and aromas that will tantalize your taste buds.</p>
+        
+                <div class="cooking-style">
+                    <img src="{% static 'images/chinese-cusine.avif' %}" alt="Chinese Cuisine">
+                    <h2>Chinese Cuisine</h2>
+                    <p>Indulge in the rich flavors of Chinese cuisine with our mouthwatering dishes cooked to perfection by our talented chefs. From traditional stir-fries to delectable dim sum, our Chinese dishes are sure to delight your taste buds and transport you to the vibrant streets of China.</p>
+                </div>
+        
+                <div class="cooking-style">
+                    <img src="{% static 'images/indian-cusine.jpeg' %}" alt="Indian Cuisine">
+                    <h2>Indian Cuisine</h2>
+                    <p>Experience the vibrant and aromatic Indian flavors with our extensive selection of curries, tandoori dishes, and biryanis. Our Indian dishes are crafted with authentic spices and herbs, taking you on a culinary journey to the heart of India and giving you a taste of its rich cultural heritage.</p>
+                </div>
+        
+                <div class="cooking-style">
+                    <img src="{% static 'images/italian-cusine.jpeg' %}" alt="Italian Cuisine">
+                    <h2>Italian Cuisine</h2>
+                    <p>Indulge in the comforting and classic flavors of Italian cuisine. From our wood-fired pizzas with fresh toppings to rich and creamy pastas, our Italian dishes are made with love and the finest ingredients, bringing the taste of Italy to your table and making you feel like you're in the heart of Rome.</p>
+                </div>
+        
+                <p>At TastyBites, we are dedicated to providing you with an exceptional dining experience that celebrates the diversity of these three renowned cuisines. Come and join us for a culinary adventure like no other, where each bite will take you on a journey around the world and leave you craving for more.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 TastyBites. All rights reserved.</p>
+</footer>
+</body>
+</html>

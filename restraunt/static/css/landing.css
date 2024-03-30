@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li :hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main {
+    padding: 0px;
+}
+
+section {
+    margin-bottom: 0px;
+}
+
+.hero-image {
+    padding: 0%;
+    background-color: #000000; /* Placeholder color for the hero image */
+    height: 100vh; /* Set the desired height for your hero image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img{
+    opacity: 75%;
+    width: 100%;
+    max-width: fill;
+    max-height: calc(98vw - (40px * 2));
+    object-fit: ful;
+    object-position: center top;
+}
+
+.hero-text {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff9f9;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}

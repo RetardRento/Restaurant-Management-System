@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBites</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">TastyBites</div>
+            <ul class="menu-items-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'orders' %}">Order</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h1>Menu</h1>
+
+            <div class="menu-item">
+                <div class="food-image">
+                    <img src="{% static 'images/chow mein.jpg' %}" alt="Menu-Item 1">
+                </div>
+                <h2>Chow-Mein</h2>
+                <p class="description">
+                    From the smokey taste of an authentic chinese wok<br>
+                    we give you the traditional chinese chow-mein.</p>
+                <p class="price">Rs 250<br>
+                    <a href="{% url 'orders' %}" class="order-button">
+                        Order now!
+                    </a>
+                </p>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-image">
+                    <img src="{% static 'images/chinese fried rice.jpg' %}" alt="menu-item 2">
+                </div>
+                <h2>Chinese Stir Fried rice</h2>
+                <p class="description">
+                    We present you the freshly fried aromatic chinese<br>
+                    stir fried rice made with perfection.</p>
+                <p class="price">Rs 300<br>
+                    <a href="{% url 'orders' %}" class="order-button">
+                        Order now!
+                    </a>
+                </p>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-image">
+                    <img src="{% static 'images/pizza.jpg' %}" alt="menu-item 3">
+                </div>
+                <h2>Margarita</h2>
+                <p class="description">
+                    From the hands of fresh Italian farmers<br>
+                    the Margarita is a classic Italian pizza
+                </p>
+                <p class="price">Rs 699<br>
+                    <button disabled>Sold Out!</button> 
+                </p>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-image">
+                    <img src="{% static 'images/food-menu1.jpg' %}" alt="">
+                </div>
+                <h2>Biriyani</h2>
+                <p class="description">
+                A wonderfull hyderbadi style Goat Biriyani made with passion  
+                </p>
+                <p class="price">Rs 650<br>
+                    <a href="{% url 'orders' %}" class="order-button">
+                        Order now!
+                    </a>
+                </p>
+
+            </div>
+            
+        </section>
+
+        <!-- <section id="cart">
+            <h2>Cart</h2>
+            <div class="cart-items"></div>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TastyBites. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'js/cart.js' %}"></script>
+</body>
+
+
+</html>

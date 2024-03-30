@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Page</title>
+  <link rel="stylesheet" href="{% static 'css/orders.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TastyBites</div>
+            <ul class="menu-items-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'orders' %}">Orders</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <form id="order-form">
+      <div class="menu-item">
+        <h2>Chow-Mein</h2>
+        <label>
+          Do you want Chow-Mein?
+          <input type="checkbox" name="chowMein" value="chowMein">
+        </label>
+        <label>
+          Quantity:
+          <input type="number" name="chowMeinQuantity" min="0" value="0" disabled>
+        </label>
+      </div>
+      
+      <div class="menu-item">
+        <h2>Chinese Stir Fried Rice</h2>
+        <label>
+          Do you want Chinese Stir Fried Rice?
+          <input type="checkbox" name="chineseStirFriedRice" value="chineseStirFriedRice">
+        </label>
+        <label>
+          Quantity:
+          <input type="number" name="chineseStirFriedRiceQuantity" min="0" value="0" disabled>
+        </label>
+      </div>
+
+      <div class="menu-item">
+        <h2>Margarita</h2>
+        <label>
+          Margarita is sold out
+        </label>
+      </div>
+
+      <div class="menu-item">
+        <h2>Biriyani</h2>
+        <label>
+          Do you want Biriyani?
+          <input type="checkbox" name="biriyani" value="biriyani">
+        </label>
+        <label>
+          Quantity:
+          <input type="number" name="biriyaniQuantity" min="0" value="0" disabled>
+        </label>
+      </div>
+    <input type="hidden" id="totalQuantity" name="totalQuantity" value="0">
+    <input type="hidden" id="totalPrice" name="totalPrice" value="0">
+
+      <div class="total">
+        <h2>Total:</h2>
+        <p id="totalAmount">0 rs</p>
+      </div>
+      
+      <!-- <button type="submit">Submit Order</button> -->
+      <a href="{% url 'order-submission' %}" class="button" onclick="submitOrder()">Submit Order</a>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 TastyBites. All rights reserved.</p>
+</footer>
+  <script src="{% static 'js/orders.js' %}"></script>
+</body>
+</html>

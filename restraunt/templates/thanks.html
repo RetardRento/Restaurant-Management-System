@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Ordering</title>
+    <link rel="stylesheet" href="{% static 'css/thankyou.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo">TastyBites</div> -->
+            <div class="logo">
+                <a href="{% url 'home' %}">TastyBites</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="thank-you-container">
+            <h1>Thank You for Your Order!</h1>
+            <div class="timer-container">
+                <div id="progress-bar"></div>
+                <div id="timer">30:00</div>
+            </div>
+            <div id="status">Ordering...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TastyBites. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/moment.js' %}"></script>
+</body>
+
+</html>

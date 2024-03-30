@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Submission</title>
+  <link rel="stylesheet" href="{% static 'css/submit.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">TastyBites</div>
+      <ul class="menu-items-list">
+        <li><a href="{% static 'home' %}">Home</a></li>
+        <li><a href="{% static 'about-us' %}">About Us</a></li>
+        <li><a href="{% static 'menu' %}">Menu</a></li>
+        <li><a href="{% static 'orders' %}">Orders</a></li>
+        <li><a href="{% static 'contact' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Order Summary</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="order-table-body">
+        <!-- Order items will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <form id="customer-details-form" method="post">
+      {% csrf_token %}
+      <h2>Customer Details</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" maxlength="13" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <!-- <button type="submit">Submit Order</button> -->
+      <button type="submit"><a href="{% url 'thanks' %}" class="button">Submit Order</a></button>
+    </form>
+    <div class="total">
+      <h2>Total Amount:</h2>
+      <p id="totalAmount">0 Rs</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 TastyBites. All rights reserved.</p>
+  </footer>
+
+  <script src="{% static 'js/order-submission.js' %}"></script>
+</body>
+
+</html>

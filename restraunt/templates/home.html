@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Restaurant Name - Home</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">TastyBites</div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'orders' %}">Order</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero-image">
+                <img src="{% static 'images/white backround.jpg' %}">
+            </div>
+            <div class="hero-text">
+                <h1>Welcome TastyBites</h1>
+                <p>Enjoy our delicious food and great ambiance.</p>
+                <a href="{% url 'menu' %}">View Menu</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TastyBites. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
